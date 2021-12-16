@@ -26,7 +26,7 @@
 ### Problem
 1.	Create a REST API using ASP.NET MVC and write a method to return a sorted list of these by Publisher, Author (last, first), then title.
 
-# This method is to get all book with specific order and this async methods. I tried to write everything simple. I can also create for response Dto class but I did not do that.  
+###### This method is to get all book with specific order and this async methods. I tried to write everything simple. I can also create for response Dto class but I did not do that.  
 ```csharp
 // GET: api/Books/GetBooksByPublisherThenAuthorThenTitle
 [HttpGet("GetBooksByPublisherThenAuthorThenTitle")]
@@ -48,7 +48,7 @@ public async Task<ActionResult<IEnumerable<Book>>> GetBooksByAuthorThenTitle()
 
 3.	If you had to create one or more tables to store the Book data in a MS SQL database, outline the table design along with fields and their datatypes. 
 
-#### For question 7 and 8. I can aslo create an extra table which has a relationship to this table but I did not because it is small demo. 
+###### For question 7 and 8. I can aslo create an extra table which has a relationship to this table but I did not because it is small demo. 
 
 ```csharp
 public class Book
@@ -75,7 +75,7 @@ public class Book
 
 
 4.	Write stored procedures in MS SQL Server for steps 1 and 2, and use them in separate API methods to return the same results.
-# At first I create an empty migration then write down my procedure inside that migration
+###### At first I create an empty migration then write down my procedure inside that migration
 ```csharp
 public partial class spGetBooksByPublisherThenAuthorThenTitle : Migration
 {
@@ -98,7 +98,7 @@ public partial class spGetBooksByPublisherThenAuthorThenTitle : Migration
 }
 ```
 
-# Then I call my procedure directly inside my controller via EntityFramework with raw option sql methods
+###### Then I call my procedure directly inside my controller via EntityFramework with raw option sql methods
 ```csharp
 // GET: api/Books/GetBooksByAuthorThenTitleByStoreProcedure
 [HttpGet("GetBooksByAuthorThenTitleByStoreProcedure")]
@@ -108,7 +108,7 @@ public async Task<ActionResult<IEnumerable<Book>>> GetBooksByAuthorThenTitleBySt
 }
 ```
 
-####Note: I did also for the second question same proccess
+#####Note: I did also for the second question same proccess
 
 5.	Write an API method to return the total price of all books in the database.
 I just write a simple methon which sum the all price
@@ -177,7 +177,7 @@ Here I use ``` string.Format()``` method to combine my string format. There are 
 
 
 8.	Add another property to generate a Chicago style citation (Chicago Manual of Style) (https://images.app.goo.gl/w3SRpg2ZFsXewdAj7).
-#### Did as same as step 7
+###### Did as same as step 7
 ```csharp
 // GET: api/Books/GetChicagoStyleCitations
 [HttpGet("GetChicagoStyleCitations")]
