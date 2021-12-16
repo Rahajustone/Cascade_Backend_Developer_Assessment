@@ -194,3 +194,6 @@ public async Task<ActionResult<IEnumerable<string>>> GetChicagoStyleCitations()
             ).ToListAsync();
 }
 ```
+
+### API
+![alt text](https://raw.githubusercontent.com/Rahajustone/Cascade_Backend_Developer_Assessment/master/demo.png)
